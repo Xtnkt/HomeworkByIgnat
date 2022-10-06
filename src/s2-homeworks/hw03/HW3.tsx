@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {v1} from 'uuid'
 import s2 from '../../s1-main/App.module.css'
 import GreetingContainer from './GreetingContainer'
-import user from "../hw08/User";
+
 
 /*
 * 1 - описать тип UserType
@@ -31,7 +31,6 @@ export const pureAddUserCallback = (name: string, setUsers: (users: UserType[]) 
             name: name// need to fix
         }
     setUsers([...users,user])
-
 }
 
 const HW3 = () => {
@@ -39,7 +38,7 @@ const HW3 = () => {
 
     const addUserCallback = (name: string) => { // need to fix any
         pureAddUserCallback(name, setUsers, users)
-        console.log(users)
+
     }
 
     return (
