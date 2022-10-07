@@ -1,5 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import {UserType} from "./HW3";
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -61,7 +62,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                 </button>
             </div>
 
-            {lastUserName?.trim() && (
+            {lastUserName && (
                 <div className={s.greeting}>
                     Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
                 </div>
