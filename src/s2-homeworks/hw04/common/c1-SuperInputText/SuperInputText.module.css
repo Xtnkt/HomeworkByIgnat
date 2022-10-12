@@ -1,20 +1,37 @@
 .input:focus {
+    outline:none;
 }
 
 .input {
+    box-sizing: border-box;
+    border: 2px solid rgba(209, 209, 209, 1);
+    border-radius: 5px;
+    width:372px;
+    height: 36px;
 }
 
 .inputWrapper {
+    display: flex;
+    margin-left: 70px;
+    flex-direction: column-reverse;
 }
 
 .superInput {
+    display: flex;
 }
 
 .errorInput {
+    border: 2px solid rgba(204, 20, 57, 1);
+    border-radius: 5px;
 }
 
 .errorInput:focus {
+    outline:2px solid rgba(204, 20, 57, 1);
+    outline-offset: -2px
 }
 
 .error {
+    color: #cc0000;
+display: flex;
+
 }
