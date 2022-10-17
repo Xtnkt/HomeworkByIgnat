@@ -20,6 +20,7 @@
 }
 
 .text {
+    z-index: -1;
     position: relative;
     background: #0066CC;
     border-radius: 10px 10px 0px 10px;
@@ -29,6 +30,7 @@
 }
 
 .text:after {
+    z-index: -1;
     content: "";
     position: absolute;
     bottom: 0;
