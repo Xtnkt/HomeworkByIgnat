@@ -8,11 +8,11 @@
     border-radius: 5px;
     width:372px;
     height: 36px;
+    padding: 8px 0px 8px 24px;
 }
 
 .inputWrapper {
     display: flex;
-    margin-left: 70px;
     flex-direction: column-reverse;
 }
 

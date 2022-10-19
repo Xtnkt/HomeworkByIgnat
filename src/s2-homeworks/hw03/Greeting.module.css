@@ -13,7 +13,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    margin: 7px 0px 0px 70px;
+    margin: 7px 0px 0px 0px;
     color: #CC0000;
 }
 
@@ -22,8 +22,7 @@
     border-radius: 5px;
     height: 36px;
     width: 372px;
-    margin-left: 70px;
-
+    padding: 8px 0px 8px 24px;
 }
 
 .input:focus {
@@ -37,7 +36,6 @@
     border-radius: 5px;
     height: 36px;
     width: 372px;
-    margin-left: 70px;
 }
 
 .button {
@@ -73,7 +71,7 @@
     width: 143px;
     height: 17px;
     color: rgba(0, 0, 0, 0.5);
-    margin: 31px 0px 9px 70px
+    margin: 31px 0px 9px 0px
 }
 
 .greeting {
@@ -83,5 +81,5 @@
     font-size: 14px;
     line-height: 17px;
     color: #000000;
-    margin: 10px 0px 0px 70px;
+    margin: 10px 0px 0px 0px;
 }

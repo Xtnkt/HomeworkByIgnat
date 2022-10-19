@@ -7,7 +7,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    margin-left: 70px;
 }
 
 .friendImageAndText img {
@@ -66,7 +65,7 @@
 .friendTime {
     display: flex;
     margin-top: 5px;
-    margin-left: 80px;
+    margin-left: 10px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;

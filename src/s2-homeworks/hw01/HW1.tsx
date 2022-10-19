@@ -66,8 +66,8 @@ const HW1 = () => {
 
                 {/*для автоматической проверки дз (не менять)*/}
                 <MessageSender M={Message}/>
-                <hr className={s2.hr}/>
             </div>
+            <hr className={s2.hr}/>
         </div>
     )
 }
