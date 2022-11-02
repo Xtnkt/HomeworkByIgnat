@@ -1,6 +1,6 @@
 import React from 'react'
 import { homeWorkReducer } from '../homeWorkReducer'
-import { UserType } from '../../HW8'
+import { UserType} from '../../HW8'
 
 let initialState: UserType[] // need to fix any
 
