@@ -37,10 +37,11 @@ const HW13 = () => {
             .post(url, {success: x})
             .then((res) => {
                 debugger
+                setCode('КОД 200!')
                 setText(res.data.errorText)
-                setCode(res.data.info)
+                setInfo(res.data.info)
                 setImage(success200)
-                setInfo('')
+
                 // дописать
 
             })
@@ -48,20 +49,21 @@ const HW13 = () => {
                 debugger
                 // setText(e.response.data.info)
                 if (x === false) {
+                    setCode('Ошибка 500!')
                     setText(e.response.data.errorText)
-                    setCode(e.response.data.info)
+                    setInfo(e.response.data.info)
                     setImage(error500)
-                    setInfo('')
                 } else if (x === undefined) {
+                    setCode('Ошибка 400!')
                     setText(e.response.data.errorText)
-                    setCode(e.response.data.info)
                     setImage(error400)
-                    setInfo('')
+                    setInfo(e.response.data.info)
                 }else if (x === null) {
-                    setText(e.name)
-                    setCode(e.message)
+                    setInfo('...loading')
+                    setCode(e.code)
+                    setText(e.message)
                     setImage(errorUnknown)
-                    setInfo('')
+                    setInfo(e.name)
                 }
             })
         // if (x === null) {
