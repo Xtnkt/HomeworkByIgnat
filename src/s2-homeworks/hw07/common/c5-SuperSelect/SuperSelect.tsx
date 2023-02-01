@@ -10,7 +10,7 @@ type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectE
 
 export type OptionsType = {
     id: number,
-    value: string
+    value: string|number
 }
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
