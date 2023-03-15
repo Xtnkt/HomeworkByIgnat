@@ -84,7 +84,7 @@ const HW15 = () => {
         // setSearchParams(newSort)
         // sendQuery(
         // setSearchParams(
-
+        setSearchParams(`&sort=${newSort}`)
         //
     }
 
@@ -132,7 +132,6 @@ const HW15 = () => {
                         <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
                     </div>
                 </div>
-
                 {mappedTechs}
             </div>
         </div>

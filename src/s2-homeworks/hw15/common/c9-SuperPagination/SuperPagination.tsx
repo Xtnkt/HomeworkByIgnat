@@ -25,7 +25,6 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
     }
 
     const onChangeSelect = (event: ChangeEvent<HTMLSelectElement>) => {
-        debugger
         if (event) {
             onChange(page,parseInt(event.currentTarget.value))
         }
