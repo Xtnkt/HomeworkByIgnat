@@ -36,6 +36,7 @@ const getTechs = (params: ParamsType) => {
         .catch((e) => {
             alert(e.response?.data?.errorText || e.message)
         })
+
 }
 
 const HW15 = () => {
@@ -77,13 +78,13 @@ const HW15 = () => {
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-        setSort(newSort)
         // setSort(
-        setPage(1) // при сортировке сбрасывать на 1 страницу
-        sendQuery({sort:newSort})
         // setSearchParams(newSort)
         // sendQuery(
         // setSearchParams(
+        setSort(newSort)
+        // setPage() // при сортировке сбрасывать на 1 страницу
+        sendQuery({sort:newSort})
         setSearchParams(`&sort=${newSort}`)
         //
     }
