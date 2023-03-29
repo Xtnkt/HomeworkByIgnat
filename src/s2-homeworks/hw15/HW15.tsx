@@ -22,9 +22,9 @@ type TechType = {
 }
 
 type ParamsType = {
-    sort: string
-    page: number
-    count: number
+    sort?: string
+    page: number | string
+    count: number | string
 }
 
 const getTechs = (params: ParamsType) => {
@@ -48,7 +48,7 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    const sendQuery = (params: any) => {
+    const sendQuery = (params: ParamsType) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
@@ -66,13 +66,15 @@ const HW15 = () => {
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-        setPage(newPage)
-        setCount(newCount)
         // setPage(
         // setCount(
-        sendQuery({page:newPage, count:newCount})
         // sendQuery(
-        setSearchParams(`&count=${newCount}`)
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({sort: sort, page: newPage, count: newCount})
+        searchParams.set('count', newCount.toString())
+        searchParams.set('page', newPage.toString())
+        setSearchParams(searchParams)
         //
     }
 
@@ -83,15 +85,18 @@ const HW15 = () => {
         // sendQuery(
         // setSearchParams(
         setSort(newSort)
-        // setPage() // при сортировке сбрасывать на 1 страницу
-        sendQuery({sort:newSort})
-        setSearchParams(`&sort=${newSort}`)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        sendQuery({sort: newSort, page: 1, count: count})
+        searchParams.set('sort', newSort)
+        searchParams.set('page', '1')
+        setSearchParams(searchParams)
         //
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
         sendQuery({page: params.page, count: params.count})
+        setSort(params.sort)
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
