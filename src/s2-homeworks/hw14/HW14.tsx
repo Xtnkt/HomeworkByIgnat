@@ -4,6 +4,7 @@ import s from './HW14.module.css'
 import axios from 'axios'
 import SuperDebouncedInput from './common/c8-SuperDebouncedInput/SuperDebouncedInput'
 import {useSearchParams} from 'react-router-dom'
+import {log} from "util";
 
 /*
 * 1 - дописать функцию onChangeTextCallback в SuperDebouncedInput
@@ -64,11 +65,13 @@ const HW14 = () => {
         setFind(params.find || '')
     }, [])
 
-    const mappedTechs = techs.map(t => (
-        <div key={t} id={'hw14-tech-' + t} className={s.tech}>
-            {t}
-        </div>
-    ))
+    const mappedTechs = techs.map(t => {
+        return(
+            <div key={t} id={'hw14-tech-' + t} className={s.tech}>
+                {t}
+            </div>
+        )}
+    )
 
     return (
         <div id={'hw14'}>
@@ -85,7 +88,6 @@ const HW14 = () => {
                 <div id={'hw14-loading'} className={s.loading}>
                     {isLoading ? '...ищем' : <br/>}
                 </div>
-
                 {mappedTechs}
             </div>
         </div>
